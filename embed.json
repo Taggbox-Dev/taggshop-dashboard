@@ -1,6 +1,6 @@
-{   "script1":"https://web.taggshop.io/static/js/3.3cc827fb.chunk.js",
-   "script2":"https://web.taggshop.io/static/js/main.6c8d5012.chunk.js",
-	"css1":"https://web.taggshop.io/static/css/3.ca0c2dbf.chunk.css",
-	"css2":"https://web.taggshop.io/static/css/main.efad1097.chunk.css",
+{   "script1":"https://react.taggshop.io/static/js/3.3cc827fb.chunk.js",
+   "script2":"https://react.taggshop.io/static/js/main.6c8d5012.chunk.js",
+	"css1":"https://react.taggshop.io/static/css/3.ca0c2dbf.chunk.css",
+	"css2":"https://react.taggshop.io/static/css/main.efad1097.chunk.css",
 	"id":"root"
 }
