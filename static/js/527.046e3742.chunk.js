@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact1=self.webpackChunkreact1||[]).push([[527],{85527:function(n,e,r){r.r(e);var a,c,i=r(30168),t=r(21202),u=r(72691),s=r(46417),f=(0,u.F4)(a||(a=(0,i.Z)(["",""])),t.Ji),h=u.ZP.div(c||(c=(0,i.Z)(["\n  animation: 1s ",";\n"])),f);e.default=function(n){var e=n.children;return(0,s.jsx)(h,{children:e})}}}]);
