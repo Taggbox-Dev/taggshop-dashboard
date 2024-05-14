@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact1=self.webpackChunkreact1||[]).push([[7367],{87367:(e,o,s)=>{s.r(o),s.d(o,{default:()=>d});var c=s(65043),n=s(35475),r=s(72415),t=s(70579);const a=e=>{console.log("code",e);const o=new BroadcastChannel("connect");e&&(window.opener?window.opener.postMessage({error:!1,code:e},"*"):o.postMessage(JSON.stringify({error:!1,code:e})),window.close())},d=()=>{const[e,o]=(0,n.ok)();return(0,c.useEffect)((()=>(a(e.get("code")),()=>{a(e.get("code"))})),[e]),(0,t.jsx)(r.A,{})}}}]);
+//# sourceMappingURL=7367.ec3bc376.chunk.js.map
