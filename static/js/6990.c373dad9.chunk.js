@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact1=self.webpackChunkreact1||[]).push([[6990],{6990:(e,t,c)=>{c.r(t),c.d(t,{default:()=>r});var a=c(66345),s=c(44414);const r=()=>(0,s.jsx)("div",{className:"theme_preview",children:(0,s.jsx)("iframe",{src:"".concat(a.gEI).concat(localStorage.getItem("website_id"),"/editor?website=true")})})}}]);
