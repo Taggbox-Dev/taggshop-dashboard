@@ -15,13 +15,12 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      const loadJS = (e, t, o, s) => {
-          const a = document.createElement("script");
-          (a.src = e),
-            t && (a.async = !0),
-            o && (a.defer = !0),
-            (a.onload = s || (() => console.log(`JS Loaded: ${e}`))),
-            document.body.appendChild(a);
+      const loadJS = (t, e, o) => {
+          const s = document.createElement("script");
+          (s.src = t),
+            e && (s.async = !0),
+            o && (s.defer = !0),
+            document.body.appendChild(s);
         },
         getappJS = () => {
           loadJS("/assets/jquery.minicolors.js"),
@@ -39,19 +38,19 @@
             loadJS("https://js.stripe.com/v3/");
         };
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.self !== window.top) {
-          const e = document.getElementById("rootLoader"),
-            t = document.getElementById("rootDashoard");
-          e &&
-            t &&
-            ((t.style.display = "none"),
-            (e.style.display = "block"),
-            setTimeout(() => {
+        if (window.self == window.top) {
+          const t = document.getElementById("rootLoader"),
+            e = document.getElementById("rootDashoard");
+          if (t && e) {
+            (e.style.display = "none"), (t.style.display = "block");
+            const o = setTimeout(() => {
               getappJS(),
                 getTagmanager(),
-                (e.style.display = "none"),
-                (t.style.display = "block");
-            }, 5e3));
+                o && clearTimeout(o),
+                (t.style.display = "none"),
+                (e.style.display = "block");
+            }, 5e3);
+          }
         } else getappJS(), getTagmanager();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
@@ -192,7 +191,7 @@
       class="delayed-script"
       src="https://unpkg.com/@shopify/app-bridge-utils@3"
     ></script>
-    <script defer="defer" src="/static/js/main.0dda0336.js"></script>
+    <script defer="defer" src="/static/js/main.fca63868.js"></script>
     <link href="/static/css/main.0d9ddfea.css" rel="stylesheet" />
   </head>
   <body
