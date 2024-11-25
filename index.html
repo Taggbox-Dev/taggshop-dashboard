@@ -15,6 +15,8 @@
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+
     <script>
 
       console.log('shopify-debug------1111')
@@ -27,6 +29,8 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
+          loadJS("https://unpkg.com/@shopify/app-bridge@3"),
+          loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
           loadJS("/assets/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
@@ -40,6 +44,8 @@
             loadJS("https://js.stripe.com/v3/");
             loadJS("/static/js/main.11092de3.js");
         };
+  
+
       document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top) {
           const t = document.getElementById("rootLoader"),
@@ -54,7 +60,7 @@
                 (e.style.display = "block");
                 console.log('shopify-debug------2222222')
 
-            }, 10000);
+            }, 20000);
           }
         } else getappJS(), getTagmanager();
       }),
@@ -188,16 +194,6 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
     </script>
-    
-    <script
-      class="delayed-script"
-      src="https://unpkg.com/@shopify/app-bridge@3"
-    ></script>
-    <script
-      class="delayed-script"
-      src="https://unpkg.com/@shopify/app-bridge-utils@3"
-    ></script>
-    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
      <link href="/static/css/main.c3d4ef31.css" rel="stylesheet" />
   </head>
   <body
