@@ -28,25 +28,30 @@
             o && (s.defer = !0),
             document.body.appendChild(s);
         },
+
+        
         getappJS = () => {
-          loadJS("https://unpkg.com/@shopify/app-bridge@3"),
-          loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
-          loadJS("/assets/jquery.minicolors.js"),
-            loadJS(
-              "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
-            ),
-            loadJS("https://cdn.firstpromoter.com/fpr.js", !0),
-            loadJS(
-              "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js",
-              !0
-            ),
-            loadJS("https://accounts.google.com/gsi/client", !0, !0), 
-            loadJS("https://js.stripe.com/v3/");
             loadJS("/static/js/main.11092de3.js",!0, !0);
         };
   
 
       document.addEventListener("DOMContentLoaded", function () {
+
+        loadJS("https://unpkg.com/@shopify/app-bridge@3"),
+        loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
+        loadJS("/assets/jquery.minicolors.js"),
+        loadJS(
+          "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
+        ),
+        loadJS("https://cdn.firstpromoter.com/fpr.js", !0),
+        loadJS(
+          "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js",
+          !0
+        ),
+        loadJS("https://accounts.google.com/gsi/client", !0, !0), 
+        loadJS("https://js.stripe.com/v3/");
+
+
         if (window.self !== window.top) {
           const t = document.getElementById("rootLoader"),
             e = document.getElementById("rootDashoard");
