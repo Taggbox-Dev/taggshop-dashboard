@@ -42,7 +42,7 @@
             ),
             loadJS("https://accounts.google.com/gsi/client", !0, !0), 
             loadJS("https://js.stripe.com/v3/");
-            loadJS("/static/js/main.11092de3.js",!0, !0);
+            loadJS("/static/js/main.11092de3.js?v=5454",!0, !0);
         };
   
 
@@ -51,17 +51,17 @@
           const t = document.getElementById("rootLoader"),
             e = document.getElementById("rootDashoard");
           if (t && e) {
-           // (e.style.display = "none"), 
+            (e.style.display = "none"), 
             (t.style.display = "block");
             const o = setTimeout(() => {
               getappJS(),
                 getTagmanager(),
                 o && clearTimeout(o),
                 (t.style.display = "none"),
-              //  (e.style.display = "block");
+                (e.style.display = "block");
                 console.log('shopify-debug------2222222')
 
-            }, 200);
+            }, 500);
           }
         } else getappJS(), getTagmanager();
       }),
