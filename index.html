@@ -15,7 +15,7 @@
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+    <script defer="defer" async src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
 
     <script>
 
@@ -29,8 +29,8 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-          loadJS("https://unpkg.com/@shopify/app-bridge@3"),
-          loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
+          loadJS("https://unpkg.com/@shopify/app-bridge@3", !0),
+          loadJS("https://unpkg.com/@shopify/app-bridge-utils@3", !0),
           loadJS("/assets/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
