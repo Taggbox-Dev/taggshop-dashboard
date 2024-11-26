@@ -58,7 +58,7 @@
               getappJS(), getTagmanager(), s && clearTimeout(s);
             }, 1e3);
           }
-        } else getappJS(), getTagmanager(), loadScript();
+        } else getappJS(), getTagmanager();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -190,24 +190,27 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
       const loadScript = () => {
-        console.log('loadScriptloadScript')
-        let t = document.createElement("link");
-          t.setAttribute("type", "text/css"),
-          t.setAttribute("rel", "stylesheet"),
-          t.setAttribute(
+        let t = document.createElement("div");
+        document.getElementById("load-app").appendChild(t);
+        let e = document.createElement("link");
+        e.setAttribute("type", "text/css"),
+          e.setAttribute("rel", "stylesheet"),
+          e.setAttribute(
             "href",
-            "/static/css/main.69010127.css"
+            "https://app.tagshop.ai/static/css/main.91d5a2c3.css"
           ),
-          document.head.appendChild(t);
-        let e = document.createElement("script");
-         e.setAttribute(
+          document.head.appendChild(e);
+        let s = document.createElement("script");
+        s.setAttribute(
           "src",
-          "/static/js/main.2d308ba4.js"
+          "https://app.tagshop.ai/static/js/main.41a2f710.js"
         ),
-          e.setAttribute("defer", defer),
-          document.body.appendChild(e);
+          (s.defer = !0),
+          document.body.appendChild(s);
       };
     </script>
+    <script defer="defer" src="/static/js/main.2d308ba4.js"></script>
+    <link href="/static/css/main.69010127.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -222,6 +225,7 @@
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
     <div id="rootDashoardShopify" style="display: none">
+      <div id="load-app"></div>
       <div>
         <div class="modal-content">
           <div class="p-0 bg-body overflow-hidden rounded-2 modal-body">
@@ -284,7 +288,6 @@
           </div>
         </div>
       </div>
-      <div class="load-app"></div>
     </div>
   </body>
 </html>
