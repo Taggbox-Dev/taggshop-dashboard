@@ -18,12 +18,20 @@
     <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script>
       console.log("shopify-debug,--------11111");
-      const loadJS = (e, t, o) => {
-          const s = document.createElement("script");
-          (s.src = e),
-            t && (s.async = !0),
-            o && (s.defer = !0),
-            document.body.appendChild(s);
+      const loadJS = (t, e, s) => {
+          const o = document.createElement("script");
+          (o.src = t),
+            e && (o.async = !0),
+            s && (o.defer = !0),
+            document.body.appendChild(o);
+        },
+        loadCss = (t) => {
+          let e = document.createElement("link");
+          e.setAttribute("type", "text/css"),
+            e.setAttribute("rel", "stylesheet"),
+            e.setAttribute("data-css", "social-wall"),
+            e.setAttribute("href", t),
+            document.head.appendChild(e);
         },
         getappJS = () => {
           loadJS("/assets/jquery.minicolors.js"),
@@ -39,23 +47,18 @@
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/");
-            window.self == window.top  && loadJS("/static/js/main.7f981863.js");
         };
       document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top) {
-          const e = document.getElementById("rootLoader"),
-            t = document.getElementById("rootDashoard");
-          if (e && t) {
-            (t.style.display = "none"), (e.style.display = "block");
-            const o = setTimeout(() => {
-              getappJS(),
-                getTagmanager(),
-                o && clearTimeout(o),
-                (e.style.display = "none"),
-                (t.style.display = "block");
+          const t = document.getElementById("rootDashoardShopify"),
+            e = document.getElementById("rootDashoard");
+          if (t && e) {
+            (e.style.display = "none"), (t.style.display = "block");
+            const s = setTimeout(() => {
+              getappJS(), getTagmanager(), s && clearTimeout(s);
             }, 1e3);
           }
-        } else getappJS(), getTagmanager();
+        } else getappJS(), getTagmanager(), loadScript();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -186,22 +189,25 @@
       })(window),
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
-      const clicktoLoad = () => {
-        let t = document.createElement("div");
-        document.getElementsByClassName("load-app")[0].appendChild(t);
-      
-        let s = document.createElement("script");
-        s.setAttribute(
+      const loadScript = () => {
+        console.log('loadScriptloadScript')
+        let t = document.createElement("link");
+          t.setAttribute("type", "text/css"),
+          t.setAttribute("rel", "stylesheet"),
+          t.setAttribute(
+            "href",
+            "/static/css/main.69010127.css"
+          ),
+          document.head.appendChild(t);
+        let e = document.createElement("script");
+         e.setAttribute(
           "src",
-          "/static/js/main.7f981863.js"
+          "/static/js/main.2d308ba4.js"
         ),
-          s.setAttribute("data-js", "social-wall"),
-          document.body.appendChild(s),
-          console.log(s, "myCssmyCssmyCss");
+          e.setAttribute("defer", defer),
+          document.body.appendChild(e);
       };
     </script>
-    
-    <link href="/static/css/main.69010127.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -215,26 +221,70 @@
       ></iframe></noscript
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
-    <div style="height: 20px">
-      <div onclick="clicktoLoad()">loadApp</div>
-      <div class="load-app"></div>
-    </div>
-    <div
-      id="rootLoader"
-      class="f-center"
-      style="min-height: calc(-100px + 100vh); display: none"
-    >
-      <div
-        class="loader__ position-absolute h-100 w-100 f-center top-0 start-0 bg-undefined rounded-3"
-      >
-        <img
-          src="https://cloud.tagshop.ai/app/media/images/spinner-70.gif"
-          height="70"
-          width="70"
-          alt="Tagshop Spinner"
-          class="img-fluid"
-        />
+    <div id="rootDashoardShopify" style="display: none">
+      <div>
+        <div class="modal-content">
+          <div class="p-0 bg-body overflow-hidden rounded-2 modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="mb-8 mb-lg-0 mx-auto col-lg-6 col-6">
+                  <img
+                    src="/assets/media/images/review-modal.png"
+                    class="position-relative mt-lg-2 img-fluid"
+                  />
+                </div>
+                <div class="pe-lg-5 pb-5 mb-1 pb-lg-0 col-lg-6">
+                  <span
+                    class="text-white rounded-pill m-0 mb-3 badge bg-primary"
+                    >New in the app</span
+                  >
+                  <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
+                  <p class="fw-bold">
+                    Customers trust reviews. Did you know positive reviews can
+                    increase sales by up to 30%?
+                  </p>
+                  <p>
+                    Now, with Tagshop.ai, you can easily collect reviews &amp;
+                    ratings directly on your product pages.
+                  </p>
+                  <p>This means:</p>
+                  <div class="d-flex align-items-start mb-3">
+                    <i
+                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                    ></i>
+                    <p class="mb-0">
+                      More customer feedback: Capture valuable insights to
+                      improve your products and brand.
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-start mb-3">
+                    <i
+                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                    ></i>
+                    <p class="mb-0">
+                      Boosted conversions: Powerful reviews convince hesitant
+                      buyers to hit 'purchase.'
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-start mb-3">
+                    <i
+                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                    ></i>
+                    <p class="mb-0">
+                      Simplified process: No need for redirects - a seamless
+                      experience for both you &amp; your customers.
+                    </p>
+                  </div>
+                  <a onclick="loadScript()" class="btn btn-dark my-4" href="#"
+                    >Explore More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="load-app"></div>
     </div>
   </body>
 </html>
