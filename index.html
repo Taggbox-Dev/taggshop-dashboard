@@ -26,7 +26,13 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-          loadJS("/assets/jquery.minicolors.js"),
+             loadJS("/static/js/main.a0fb5eb9.js", !0, !0);
+        };
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+            loadJS("/assets/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
             ),
@@ -39,11 +45,7 @@
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/");
-            loadJS("/static/js/main.a0fb5eb9.js", !0, !0);
-        };
 
-
-      document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top) {
           const e = document.getElementById("rootLoader"),
             t = document.getElementById("rootDashoard");
@@ -55,7 +57,7 @@
                 o && clearTimeout(o),
                 (e.style.display = "none"),
                 (t.style.display = "block");
-            }, 100);
+            }, 1000);
           }
         } else getappJS(), getTagmanager();
       }),
