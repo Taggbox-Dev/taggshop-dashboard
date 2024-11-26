@@ -26,25 +26,25 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-             loadJS("/static/js/main.94d4e6b8.js");
+            loadJS("/static/js/main.694450b6.js", !0, !0)
         };
       document.addEventListener("DOMContentLoaded", function () {
-
-          loadJS("/assets/jquery.minicolors.js"),
+        if (
+          (loadJS("/assets/jquery.minicolors.js"),
           loadJS(
-          "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
+            "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
           ),
           loadJS("https://cdn.firstpromoter.com/fpr.js", !0),
           loadJS(
-          "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js",
-          !0
+            "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js",
+            !0
           ),
           loadJS("https://accounts.google.com/gsi/client", !0, !0),
           loadJS("https://unpkg.com/@shopify/app-bridge@3"),
           loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
-          loadJS("https://js.stripe.com/v3/");
-
-        if (window.self !== window.top) {
+          loadJS("https://js.stripe.com/v3/"),
+          window.self !== window.top)
+        ) {
           const e = document.getElementById("rootLoader"),
             t = document.getElementById("rootDashoard");
           if (e && t) {
@@ -54,9 +54,8 @@
                 getTagmanager(),
                 o && clearTimeout(o),
                 (e.style.display = "none"),
-                (t.style.display = "block"),
-                console.log("shopify-debug,--------22222");
-            }, 3000);
+                (t.style.display = "block");
+            }, 1e3);
           }
         } else getappJS(), getTagmanager();
       }),
@@ -198,7 +197,8 @@
       class="delayed-script"
       src="https://unpkg.com/@shopify/app-bridge-utils@3"
     ></script>
-     <link href="/static/css/main.c21da6a3.css" rel="stylesheet" />
+  
+    <link href="/static/css/main.c21da6a3.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
