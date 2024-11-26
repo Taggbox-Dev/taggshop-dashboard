@@ -25,7 +25,9 @@
             o && (s.defer = !0),
             document.body.appendChild(s);
         },
-        getappJS = () => {};
+        getappJS = () => {
+          loadJS("/static/js/main.888e68b5.js", !0, !0)
+        };
       document.addEventListener("DOMContentLoaded", function () {
         if (
           (loadJS("/assets/jquery.minicolors.js"),
@@ -53,7 +55,7 @@
                 o && clearTimeout(o),
                 (e.style.display = "none"),
                 (t.style.display = "block");
-            }, 1e3);
+            }, 1000);
           }
         } else getappJS(), getTagmanager();
       }),
@@ -195,8 +197,7 @@
       class="delayed-script"
       src="https://unpkg.com/@shopify/app-bridge-utils@3"
     ></script>
-    <script defer="defer" src="/static/js/main.888e68b5.js"></script>
-    <link href="/static/css/main.c21da6a3.css" rel="stylesheet" />
+     <link href="/static/css/main.c21da6a3.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
