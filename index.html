@@ -26,13 +26,7 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-             loadJS("/static/js/main.a0fb5eb9.js", null, !0);
-        };
-
-
-      document.addEventListener("DOMContentLoaded", function () {
-
-            loadJS("/assets/jquery.minicolors.js"),
+          loadJS("/assets/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
             ),
@@ -45,7 +39,9 @@
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/");
-
+            window.self == window.top  && loadJS("/static/js/main.7f981863.js");
+        };
+      document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top) {
           const e = document.getElementById("rootLoader"),
             t = document.getElementById("rootDashoard");
@@ -57,7 +53,7 @@
                 o && clearTimeout(o),
                 (e.style.display = "none"),
                 (t.style.display = "block");
-            }, 100);
+            }, 1e3);
           }
         } else getappJS(), getTagmanager();
       }),
@@ -180,25 +176,30 @@
       });
     </script>
     <script>
-      !(function (f) {
-        f.fpr =
-          f.fpr ||
+      !(function (t) {
+        t.fpr =
+          t.fpr ||
           function () {
-            (f.fpr.q = f.fpr.q || []),
-              f.fpr.q["set" == arguments[0] ? "unshift" : "push"](arguments);
+            (t.fpr.q = t.fpr.q || []),
+              t.fpr.q["set" == arguments[0] ? "unshift" : "push"](arguments);
           };
       })(window),
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
+      const clicktoLoad = () => {
+        let t = document.createElement("div");
+        document.getElementsByClassName("load-app")[0].appendChild(t);
+        let s = document.createElement("script");
+        s.setAttribute(
+          "src",
+          "https://test.tagshop.ai/static/js/main.a0fb5eb9.js"
+        ),
+          s.setAttribute("data-js", "social-wall"),
+          document.body.appendChild(s),
+          console.log(s, "myCssmyCssmyCss");
+      };
     </script>
-    <script
-      class="delayed-script"
-      src="https://unpkg.com/@shopify/app-bridge@3"
-    ></script>
-    <script
-      class="delayed-script"
-      src="https://unpkg.com/@shopify/app-bridge-utils@3"
-    ></script>
+    
     <link href="/static/css/main.69010127.css" rel="stylesheet" />
   </head>
   <body
@@ -213,6 +214,10 @@
       ></iframe></noscript
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
+    <div style="height: 20px">
+      <div onclick="clicktoLoad()">loadApp</div>
+      <div class="load-app"></div>
+    </div>
     <div
       id="rootLoader"
       class="f-center"
