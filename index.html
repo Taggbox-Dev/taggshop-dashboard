@@ -26,11 +26,7 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-            loadJS("/static/js/main.5f1e3c90.js", !0, !0);
-        };
-      document.addEventListener("DOMContentLoaded", function () {
-
-            loadJS("/assets/jquery.minicolors.js"),
+          loadJS("/assets/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
             ),
@@ -43,21 +39,23 @@
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/");
-            getTagmanager()
-
+            loadJS("/static/js/main.5f1e3c90.js", !0, !0);
+        };
+      document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top) {
           const e = document.getElementById("rootLoader"),
             t = document.getElementById("rootDashoard");
           if (e && t) {
             (t.style.display = "none"), (e.style.display = "block");
             const o = setTimeout(() => {
-                getappJS(),
+              getappJS(),
+                getTagmanager(),
                 o && clearTimeout(o),
                 (e.style.display = "none"),
                 (t.style.display = "block");
             }, 1e3);
           }
-        } else getappJS();
+        } else getappJS(), getTagmanager();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
