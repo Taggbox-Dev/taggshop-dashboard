@@ -26,7 +26,7 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-             //loadJS("/static/js/main.94d4e6b8.js");
+             loadJS("/static/js/main.94d4e6b8.js");
         };
       document.addEventListener("DOMContentLoaded", function () {
 
@@ -43,7 +43,6 @@
           loadJS("https://unpkg.com/@shopify/app-bridge@3"),
           loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
           loadJS("https://js.stripe.com/v3/");
-          loadJS("/static/js/main.94d4e6b8.js");
 
         if (window.self !== window.top) {
           const e = document.getElementById("rootLoader"),
@@ -57,7 +56,7 @@
                 (e.style.display = "none"),
                 (t.style.display = "block"),
                 console.log("shopify-debug,--------22222");
-            }, 1000);
+            }, 5000);
           }
         } else getappJS(), getTagmanager();
       }),
