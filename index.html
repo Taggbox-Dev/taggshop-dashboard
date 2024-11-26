@@ -190,8 +190,8 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
       const loadScript = () => {
-        let t = document.createElement("div");
-        document.getElementById("load-app").appendChild(t);
+       // let t = document.createElement("div");
+       // document.getElementById("load-app").appendChild(t);
         let e = document.createElement("link");
         e.setAttribute("type", "text/css"),
           e.setAttribute("rel", "stylesheet"),
@@ -208,6 +208,12 @@
           (s.defer = !0),
           document.body.appendChild(s);
       };
+
+      t = document.getElementById("rootDashoardShopify"),
+      a = document.getElementById("rootDashoard");
+      t.style.display = "none"
+      a.style.display = "block"
+
     </script>
 
   </head>
