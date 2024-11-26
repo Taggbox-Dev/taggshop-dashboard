@@ -58,7 +58,7 @@
               getappJS(), getTagmanager(), s && clearTimeout(s);
             }, 1e3);
           }
-        } else getappJS(), getTagmanager();
+        } else getappJS(), getTagmanager(), loadScript();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -197,20 +197,19 @@
           e.setAttribute("rel", "stylesheet"),
           e.setAttribute(
             "href",
-            "https://app.tagshop.ai/static/css/main.91d5a2c3.css"
+            "/static/css/main.69010127.css"
           ),
           document.head.appendChild(e);
         let s = document.createElement("script");
         s.setAttribute(
           "src",
-          "https://app.tagshop.ai/static/js/main.41a2f710.js"
+          "/static/js/main.2d308ba4.js"
         ),
           (s.defer = !0),
           document.body.appendChild(s);
       };
     </script>
-    <script defer="defer" src="/static/js/main.2d308ba4.js"></script>
-    <link href="/static/css/main.69010127.css" rel="stylesheet" />
+
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
