@@ -15,7 +15,6 @@
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script>
       console.log("shopify-debug,--------11111");
       const loadJS = (t, e, s) => {
@@ -47,7 +46,7 @@
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/"),
-            loadJS("/static/js/main.b659c720.js");
+            loadJS("/static/js/main.b659c720.js", null, !0);
         };
       document.addEventListener("DOMContentLoaded", function () {
         if (window.self !== window.top && 5==7) {
