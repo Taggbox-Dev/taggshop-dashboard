@@ -179,7 +179,7 @@
     </script>
     <script>
       function loadScript(t) {
-        if (t) {
+      
 
             let myCss = document.createElement('link');
             myCss.setAttribute('type', 'text/css');
@@ -191,10 +191,11 @@
             myreact.setAttribute('src', '/static/js/main.b659c720.js');
             myreact.defer = true;
             document.body.appendChild(myreact);
- 
-            const t = document.getElementById("rootDashoardShopify"),
+
+            if (t) {
+            const a = document.getElementById("rootDashoardShopify"),
             n = document.getElementById("rootDashoard");
-          n && (n.style.display = "block"), t && (t.style.display = "none");
+          n && (n.style.display = "block"), a && (a.style.display = "none");
         }
       }
       !(function (t) {
