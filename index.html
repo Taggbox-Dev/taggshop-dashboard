@@ -15,6 +15,7 @@
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script>
       console.log("shopify-debug,--------11111");
       const loadJS = (t, e, s) => {
@@ -179,23 +180,22 @@
     </script>
     <script>
       function loadScript(t) {
-      
 
-            let myCss = document.createElement('link');
-            myCss.setAttribute('type', 'text/css');
-            myCss.setAttribute('rel', 'stylesheet');
-            myCss.setAttribute('href', '/static/css/main.548a9dee.css');
-            document.head.appendChild(myCss);
-
-            let myreact = document.createElement('script');
-            myreact.setAttribute('src', '/static/js/main.b659c720.js');
-            myreact.defer = true;
-            document.body.appendChild(myreact);
-
-            if (t) {
-            const a = document.getElementById("rootDashoardShopify"),
+         let myCss = document.createElement('link');
+          myCss.setAttribute('type', 'text/css');
+          myCss.setAttribute('rel', 'stylesheet');
+          myCss.setAttribute('href', '/static/css/main.548a9dee.css');
+          document.head.appendChild(myCss);
+ 
+          let myreact = document.createElement('script');
+          myreact.setAttribute('src', '/static/js/main.cf61c45d.js');
+          myreact.defer = true;
+          document.body.appendChild(myreact);
+ 
+        if (t) {
+          const t = document.getElementById("rootDashoardShopify"),
             n = document.getElementById("rootDashoard");
-          n && (n.style.display = "block"), a && (a.style.display = "none");
+          n && (n.style.display = "block"), t && (t.style.display = "none");
         }
       }
       !(function (t) {
@@ -344,6 +344,7 @@
         }
       }
     </style>
+   
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
