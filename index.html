@@ -15,8 +15,8 @@
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-   <script>
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
+    <script>
       console.log("shopify-debug,--------11111");
       const loadJS = (t, e, s) => {
           const o = document.createElement("script");
@@ -46,12 +46,21 @@
             loadJS("https://accounts.google.com/gsi/client", !0, !0),
             loadJS("https://unpkg.com/@shopify/app-bridge@3"),
             loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
-            loadJS("https://js.stripe.com/v3/");
-            loadJS("/static/js/main.d95059c6.js", !0, !0);
+            loadJS("https://js.stripe.com/v3/"),
+            loadJS("/static/js/main.234e899b.js", null, !0);
         };
+
       document.addEventListener("DOMContentLoaded", function () {
-        window.self, window.top, getappJS(), getTagmanager();
-        //loadScript();
+        if (window.self !== window.top) {
+          const t = document.getElementById("rootDashoardShopify"),
+            e = document.getElementById("rootDashoard");
+          if (t && e) {
+            (e.style.display = "none"), (t.style.display = "block");
+            const s = setTimeout(() => {
+              getappJS(), getTagmanager(), s && clearTimeout(s);
+            }, 1e3);
+          }
+        } else getappJS(), getTagmanager(), loadScript();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
