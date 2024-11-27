@@ -58,7 +58,7 @@
               getappJS(), getTagmanager(), s && clearTimeout(s);
             }, 1e3);
           }
-        } else getappJS(), getTagmanager();
+        } else getappJS(), getTagmanager(), loadScript();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -179,24 +179,24 @@
       });
     </script>
     <script>
-      function loadScript() {
-        let t = document.createElement("div");
-        document.getElementById("load-app").appendChild(t);
-        let e = document.createElement("link");
-        e.setAttribute("type", "text/css"),
-          e.setAttribute("rel", "stylesheet"),
-          e.setAttribute(
-            "href",
-            "https://app.tagshop.ai/static/css/main.91d5a2c3.css"
-          ),
-          document.head.appendChild(e);
-        let n = document.createElement("script");
-        n.setAttribute(
-          "src",
-          "https://app.tagshop.ai/static/js/main.41a2f710.js"
-        ),
-          (n.defer = !0),
-          document.body.appendChild(n);
+      function loadScript(t) {
+
+        let myCss = document.createElement('link');
+        myCss.setAttribute('type', 'text/css');
+        myCss.setAttribute('rel', 'stylesheet');
+        myCss.setAttribute('href', '/static/css/main.69010127.css');
+        document.head.appendChild(myCss);
+
+        let myreact = document.createElement('script');
+        myreact.setAttribute('src', '/static/js/main.698d2a16.js');
+        myreact.defer = true;
+        document.body.appendChild(myreact);
+
+        if (t) {
+          const t = document.getElementById("rootDashoardShopify"),
+            n = document.getElementById("rootDashoard");
+          n && (n.style.display = "block"), t && (t.style.display = "none");
+        }
       }
       !(function (t) {
         t.fpr =
@@ -207,12 +207,9 @@
           };
       })(window),
         fpr("init", { cid: "44stn5sn" }),
-        fpr("click"),
-        (document.getElementById("myButton").onclick = () =>
-          greetUser("Alice"));
+        fpr("click");
     </script>
-    <script defer="defer" src="/static/js/main.2d308ba4.js"></script>
-    <link href="/static/css/main.69010127.css" rel="stylesheet" />
+  
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -227,68 +224,64 @@
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
     <div id="rootDashoardShopify" style="display: none">
-      <div id="load-app"></div>
-      <div>
-        <div class="modal-content">
-          <div class="p-0 bg-body overflow-hidden rounded-2 modal-body">
-            <div class="container">
-              <div class="row">
-                <div class="mb-8 mb-lg-0 mx-auto col-lg-6 col-6">
-                  <img
-                    src="/assets/media/images/review-modal.png"
-                    class="position-relative mt-lg-2 img-fluid"
-                  />
-                </div>
-                <div class="pe-lg-5 pb-5 mb-1 pb-lg-0 col-lg-6">
-                  <span
-                    class="text-white rounded-pill m-0 mb-3 badge bg-primary"
-                    >New in the app</span
-                  >
-                  <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
-                  <p class="fw-bold">
-                    Customers trust reviews. Did you know positive reviews can
-                    increase sales by up to 30%?
+      <div class="modal-content">
+        <div class="p-0 bg-body overflow-hidden rounded-2 modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="mb-8 mb-lg-0 mx-auto col-lg-6 col-6">
+                <img
+                  src="/assets/media/images/review-modal.png"
+                  class="position-relative mt-lg-2 img-fluid"
+                />
+              </div>
+              <div class="pe-lg-5 pb-5 mb-1 pb-lg-0 col-lg-6">
+                <span class="text-white rounded-pill m-0 mb-3 badge bg-primary"
+                  >New in the app</span
+                >
+                <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
+                <p class="fw-bold">
+                  Customers trust reviews. Did you know positive reviews can
+                  increase sales by up to 30%?
+                </p>
+                <p>
+                  Now, with Tagshop.ai, you can easily collect reviews &amp;
+                  ratings directly on your product pages.
+                </p>
+                <p>This means:</p>
+                <div class="d-flex align-items-start mb-3">
+                  <i
+                    class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                  ></i>
+                  <p class="mb-0">
+                    More customer feedback: Capture valuable insights to improve
+                    your products and brand.
                   </p>
-                  <p>
-                    Now, with Tagshop.ai, you can easily collect reviews &amp;
-                    ratings directly on your product pages.
-                  </p>
-                  <p>This means:</p>
-                  <div class="d-flex align-items-start mb-3">
-                    <i
-                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                    ></i>
-                    <p class="mb-0">
-                      More customer feedback: Capture valuable insights to
-                      improve your products and brand.
-                    </p>
-                  </div>
-                  <div class="d-flex align-items-start mb-3">
-                    <i
-                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                    ></i>
-                    <p class="mb-0">
-                      Boosted conversions: Powerful reviews convince hesitant
-                      buyers to hit 'purchase.'
-                    </p>
-                  </div>
-                  <div class="d-flex align-items-start mb-3">
-                    <i
-                      class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                    ></i>
-                    <p class="mb-0">
-                      Simplified process: No need for redirects - a seamless
-                      experience for both you &amp; your customers.
-                    </p>
-                  </div>
-                  <a
-                    id="loadScript"
-                    onclick="loadScript()"
-                    class="btn btn-dark my-4"
-                    href="#"
-                    >Explore More</a
-                  >
                 </div>
+                <div class="d-flex align-items-start mb-3">
+                  <i
+                    class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                  ></i>
+                  <p class="mb-0">
+                    Boosted conversions: Powerful reviews convince hesitant
+                    buyers to hit 'purchase.'
+                  </p>
+                </div>
+                <div class="d-flex align-items-start mb-3">
+                  <i
+                    class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
+                  ></i>
+                  <p class="mb-0">
+                    Simplified process: No need for redirects - a seamless
+                    experience for both you &amp; your customers.
+                  </p>
+                </div>
+                <a
+                  id="loadScript"
+                  onclick="loadScript(1)"
+                  class="btn btn-dark my-4"
+                  href="#"
+                  >Explore More</a
+                >
               </div>
             </div>
           </div>
