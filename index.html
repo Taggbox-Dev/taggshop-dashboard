@@ -7,18 +7,14 @@
     <meta name="keywords" content="tagshop" />
     <meta name="author" content="tagshop" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="shopify-debug" content="web-vitals" />
     <link rel="icon" type="image/x-icon" href="/assets/media/favicon.ico" />
     <link rel="stylesheet" href="/assets/jquery.minicolors.css" />
     <link
       rel="stylesheet"
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
-    <link rel="stylesheet" href="./assets/custom-popup.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script>
-      console.log("shopify-debug,--------11111");
       const loadJS = (t, e, o) => {
           const s = document.createElement("script");
           (s.src = t),
@@ -42,16 +38,20 @@
             loadJS("https://js.stripe.com/v3/");
         };
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.self !== window.top && 7==6) {
-          const t = document.getElementById("rootDashoardShopify"),
+        if (window.self !== window.top && 9==7) {
+          const t = document.getElementById("rootLoader"),
             e = document.getElementById("rootDashoard");
           if (t && e) {
             (e.style.display = "none"), (t.style.display = "block");
             const o = setTimeout(() => {
-              getappJS(), getTagmanager(), o && clearTimeout(o);
-            }, 1e3);
+              getappJS(),
+                getTagmanager(),
+                o && clearTimeout(o),
+                (t.style.display = "none"),
+                (e.style.display = "block");
+            }, 5e3);
           }
-        } else getappJS(), getTagmanager(), loadScript();
+        } else getappJS(), getTagmanager();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -172,26 +172,19 @@
       });
     </script>
     <script>
-      function loadScript(t) {
-        if (t) {
-          const t = document.getElementById("rootDashoardShopify"),
-            n = document.getElementById("rootDashoard");
-          n && (n.style.display = "block"), t && (t.style.display = "none");
-        }
-      }
-      !(function (t) {
-        t.fpr =
-          t.fpr ||
+      !(function (f) {
+        f.fpr =
+          f.fpr ||
           function () {
-            (t.fpr.q = t.fpr.q || []),
-              t.fpr.q["set" == arguments[0] ? "unshift" : "push"](arguments);
+            (f.fpr.q = f.fpr.q || []),
+              f.fpr.q["set" == arguments[0] ? "unshift" : "push"](arguments);
           };
       })(window),
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
     </script>
-    <script defer="defer" src="/static/js/main.a2754dfc.js"></script>
-    <link href="/static/css/main.548a9dee.css" rel="stylesheet" />
+    <script defer="defer" src="/static/js/main.63f5d209.js"></script>
+    <link href="/static/css/main.c21da6a3.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -206,72 +199,20 @@
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
     <div
-      class="custom-modal fade show"
-      id="rootDashoardShopify"
-      style="display: none"
+      id="rootLoader"
+      class="f-center"
+      style="min-height: calc(-100px + 100vh); display: none"
     >
-      <div class="custom-modal-dialog custom-modal-dialog-centered">
-        <div class="custom-modal-content">
-          <div class="custom-modal-header">
-            <button
-              onclick="loadScript(1)"
-              type="button"
-              class="custom-btn-close"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="custom-modal-body">
-            <div class="leftAlign">
-              <img
-                src="/assets/media/images/review-modal.png"
-                width="375"
-                height="479"
-                alt="image"
-              />
-            </div>
-            <div class="rightAlign">
-              <span class="custom-badge">New in the app</span>
-              <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
-              <p class="custom-subheading">
-                Customers trust reviews. Did you know positive reviews can
-                increase sales by up to 30%?
-              </p>
-              <p>
-                Now, with Tagshop.ai, you can easily collect reviews &amp;
-                ratings directly on your product pages.
-              </p>
-              <p>This means:</p>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  More customer feedback: Capture valuable insights to improve
-                  your products and brand.
-                </p>
-              </div>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  Boosted conversions: Powerful reviews convince hesitant buyers
-                  to hit 'purchase.'
-                </p>
-              </div>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  Simplified process: No need for redirects - a seamless
-                  experience for both you &amp; your customers.
-                </p>
-              </div>
-              <a
-                id="loadScript"
-                onclick="loadScript(1)"
-                class="explore_btn"
-                href="#"
-                >Explore More</a
-              >
-            </div>
-          </div>
-        </div>
+      <div
+        class="loader__ position-absolute h-100 w-100 f-center top-0 start-0 bg-undefined rounded-3"
+      >
+        <img
+          src="https://cloud.tagshop.ai/app/media/images/spinner-70.gif"
+          height="70"
+          width="70"
+          alt="Tagshop Spinner"
+          class="img-fluid"
+        />
       </div>
     </div>
   </body>
