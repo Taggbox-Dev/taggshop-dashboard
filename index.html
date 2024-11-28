@@ -42,7 +42,7 @@
             loadJS("https://js.stripe.com/v3/");
         };
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.self !== window.top) {
+        if (window.self !== window.top && 7==6) {
           const t = document.getElementById("rootDashoardShopify"),
             e = document.getElementById("rootDashoard");
           if (t && e) {
@@ -173,17 +173,6 @@
     </script>
     <script>
       function loadScript(t) {
-        document.head.appendChild(Object.assign(document.createElement('link'), {
-              type: 'text/css',
-              rel: 'stylesheet',
-              href: '/static/css/main.548a9dee.css'
-          }));
-
-          document.body.appendChild(Object.assign(document.createElement('script'), {
-              src: '/static/js/main.57408129.js',
-              defer: true
-          }));
-
         if (t) {
           const t = document.getElementById("rootDashoardShopify"),
             n = document.getElementById("rootDashoard");
@@ -201,10 +190,11 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
     </script>
+    <script defer="defer" src="/static/js/main.a2754dfc.js"></script>
+    <link href="/static/css/main.548a9dee.css" rel="stylesheet" />
   </head>
-
   <body
-    class="new-update header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
+    class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
   >
     <noscript
       ><iframe
