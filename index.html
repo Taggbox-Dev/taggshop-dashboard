@@ -13,16 +13,14 @@
       rel="stylesheet"
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
-    <link rel="stylesheet" href="/assets/custom-popup.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      console.log("shopify-debug,--------11111");
-      const loadJS = (t, e, o) => {
-          const s = document.createElement("script");
-          (s.src = t),
-            e && (s.async = !0),
-            o && (s.defer = !0),
-            document.body.appendChild(s);
+      const loadJS = (t, e, s) => {
+          const o = document.createElement("script");
+          (o.src = t),
+            e && (o.async = !0),
+            s && (o.defer = !0),
+            document.body.appendChild(o);
         },
         getappJS = () => {
           loadJS("/assets/jquery.minicolors.js"),
@@ -40,16 +38,7 @@
             loadJS("https://js.stripe.com/v3/");
         };
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.self !== window.top) {
-          const t = document.getElementById("rootDashoardShopify"),
-            e = document.getElementById("rootDashoard");
-          if (t && e) {
-            (e.style.display = "none"), (t.style.display = "block");
-            const o = setTimeout(() => {
-              getappJS(), getTagmanager(), o && clearTimeout(o);
-            }, 1e3);
-          }
-        } else getappJS(), getTagmanager(), loadScript();
+        window.self, window.top, getappJS(), getTagmanager();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
     </script>
@@ -181,17 +170,8 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
     </script>
-    <script>
-      function loadScript(o) {
-        if (o) {
-          const o = document.getElementById("rootDashoardShopify"),
-            t = document.getElementById("rootDashoard");
-          t && (t.style.display = "block"), o && (o.style.display = "none");
-        }
-      }
-    </script>
-    <script defer="defer" src="/static/js/main.4388a279.js"></script>
-    <link href="/static/css/main.d50c7c28.css" rel="stylesheet" />
+    <script defer="defer" src="/static/js/main.8fc41fcd.js"></script>
+    <link href="/static/css/main.548a9dee.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -206,72 +186,20 @@
     ><noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="rootDashoard"></div>
     <div
-      class="custom-modal fade show"
-      id="rootDashoardShopify"
-      style="display: none"
+      id="rootLoader"
+      class="f-center"
+      style="min-height: calc(-100px + 100vh); display: none"
     >
-      <div class="custom-modal-dialog custom-modal-dialog-centered">
-        <div class="custom-modal-content">
-          <div class="custom-modal-header">
-            <button
-              onclick="loadScript(1)"
-              type="button"
-              class="custom-btn-close"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="custom-modal-body">
-            <div class="leftAlign">
-              <img
-                src="/assets/media/images/review-modal.png"
-                width="375"
-                height="479"
-                alt="image"
-              />
-            </div>
-            <div class="rightAlign">
-              <span class="custom-badge">New in the app</span>
-              <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
-              <p class="custom-subheading">
-                Customers trust reviews. Did you know positive reviews can
-                increase sales by up to 30%?
-              </p>
-              <p>
-                Now, with Tagshop.ai, you can easily collect reviews &amp;
-                ratings directly on your product pages.
-              </p>
-              <p>This means:</p>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  More customer feedback: Capture valuable insights to improve
-                  your products and brand.
-                </p>
-              </div>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  Boosted conversions: Powerful reviews convince hesitant buyers
-                  to hit 'purchase.'
-                </p>
-              </div>
-              <div class="custom-list">
-                <i class="fa-solid fa-circle-check"></i>
-                <p class="custom-list-text">
-                  Simplified process: No need for redirects - a seamless
-                  experience for both you &amp; your customers.
-                </p>
-              </div>
-              <a
-                id="loadScript"
-                onclick="loadScript(1)"
-                class="explore_btn"
-                href="#"
-                >Explore More</a
-              >
-            </div>
-          </div>
-        </div>
+      <div
+        class="loader__ position-absolute h-100 w-100 f-center top-0 start-0 bg-undefined rounded-3"
+      >
+        <img
+          src="https://cloud.tagshop.ai/app/media/images/spinner-70.gif"
+          height="70"
+          width="70"
+          alt="Tagshop Spinner"
+          class="img-fluid"
+        />
       </div>
     </div>
   </body>
