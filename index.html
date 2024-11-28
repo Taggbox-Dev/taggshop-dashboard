@@ -14,23 +14,17 @@
       rel="stylesheet"
       href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
     />
+    <link rel="stylesheet" href="./assets/custom-popup.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     <script>
       console.log("shopify-debug,--------11111");
-      const loadJS = (t, e, s) => {
-          const o = document.createElement("script");
-          (o.src = t),
-            e && (o.async = !0),
-            s && (o.defer = !0),
-            document.body.appendChild(o);
-        },
-        loadCss = (t) => {
-          let e = document.createElement("link");
-          e.setAttribute("type", "text/css"),
-            e.setAttribute("rel", "stylesheet"),
-            e.setAttribute("data-css", "social-wall"),
-            e.setAttribute("href", t),
-            document.head.appendChild(e);
+      const loadJS = (t, e, o) => {
+          const s = document.createElement("script");
+          (s.src = t),
+            e && (s.async = !0),
+            o && (s.defer = !0),
+            document.body.appendChild(s);
         },
         getappJS = () => {
           loadJS("/assets/jquery.minicolors.js"),
@@ -53,8 +47,8 @@
             e = document.getElementById("rootDashoard");
           if (t && e) {
             (e.style.display = "none"), (t.style.display = "block");
-            const s = setTimeout(() => {
-              getappJS(), getTagmanager(), s && clearTimeout(s);
+            const o = setTimeout(() => {
+              getappJS(), getTagmanager(), o && clearTimeout(o);
             }, 1e3);
           }
         } else getappJS(), getTagmanager(), loadScript();
@@ -178,19 +172,20 @@
       });
     </script>
     <script>
+
       function loadScript(t) {
 
-         let myCss = document.createElement('link');
-          myCss.setAttribute('type', 'text/css');
-          myCss.setAttribute('rel', 'stylesheet');
-          myCss.setAttribute('href', '/static/css/main.548a9dee.css');
-          document.head.appendChild(myCss);
- 
-          let myreact = document.createElement('script');
-          myreact.setAttribute('src', '/static/js/main.cf61c45d.js');
-          myreact.defer = true;
-          document.body.appendChild(myreact);
- 
+          document.head.appendChild(Object.assign(document.createElement('link'), {
+              type: 'text/css',
+              rel: 'stylesheet',
+              href: '/static/css/main.548a9dee.css'
+          }));
+
+          document.body.appendChild(Object.assign(document.createElement('script'), {
+              src: '/static/js/main.8f8d5f14.js',
+              defer: true
+          }));
+
         if (t) {
           const t = document.getElementById("rootDashoardShopify"),
             n = document.getElementById("rootDashoard");
@@ -208,142 +203,7 @@
         fpr("init", { cid: "44stn5sn" }),
         fpr("click");
     </script>
-    <style>
-      .custom-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1060;
-        display: none;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-        outline: 0;
-        background: #fff;
-      }
-      .custom-modal-content {
-        position: relative;
-        width: 100%;
-        pointer-events: auto;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 12px;
-        outline: 0;
-      }
-      .custom-modal-body {
-        display: flex;
-        position: relative;
-      }
-      .custom-modal-dialog {
-        position: relative;
-        width: auto;
-        margin: 0.5rem;
-        pointer-events: none;
-      }
-      .custom-modal-dialog-centered {
-        display: flex;
-        align-items: center;
-        min-height: calc(100% - 1rem);
-      }
-      .custom-modal.fade .custom-modal-dialog {
-        transition: transform 0.3s ease-out;
-        transform: translate(0, -50px);
-      }
-      .custom-modal.show .custom-modal-dialog {
-        transform: none;
-      }
-      .leftAlign {
-        width: 50%;
-        padding: 0 12px;
-      }
-      .leftAlign img {
-        vertical-align: bottom;
-        margin-top: 12px;
-      }
-      .rightAlign {
-        width: 50%;
-        padding: 0 12px;
-      }
-      .custom-modal-header {
-        display: flex;
-        justify-content: end;
-        padding: 12px;
-      }
-      .custom-modal-header .custom-btn-close {
-        transition: all 0.25s;
-        background: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e");
-        box-sizing: content-box;
-        width: 0.6em;
-        height: 0.6em;
-        padding: 0.25em 0.25em;
-        color: #000;
-        border: 0;
-        border-radius: 0.25rem;
-        opacity: 0.5;
-      }
-      .custom-modal-header .btn-close:hover {
-        opacity: 1;
-      }
-      .rightAlign .explore_btn {
-        margin: 15px 0 25px;
-        display: inline-block;
-      }
-      .modal-backdrop.show {
-        opacity: 0.5;
-      }
-      .modal-backdrop.fade {
-        opacity: 0;
-      }
-      .modal-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1040;
-        width: 100vw;
-        height: 100vh;
-        background-color: #000;
-      }
-      @media (min-width: 576px) {
-        .custom-modal-dialog {
-          max-width: 500px;
-          margin: 1.75rem auto;
-        }
-      }
-      @media (min-width: 768px) {
-        .custom-modal-dialog {
-          max-width: 600px;
-        }
-      }
-      @media (min-width: 992px) {
-        .custom-modal-dialog {
-          max-width: 800px;
-        }
-      }
-      @media (min-width: 576px) {
-        .custom-modal-dialog {
-          min-height: calc(100% - 3.5rem);
-        }
-      }
-      @media screen and (max-width: 991px) {
-        .custom-modal-body {
-          flex-direction: column;
-        }
-        .leftAlign {
-          width: 100%;
-          text-align: center;
-          margin-bottom: 32px;
-        }
-        .rightAlign {
-          width: 100%;
-        }
-        .leftAlign img {
-          max-width: 48%;
-        }
-      }
-    </style>
-   
+ 
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -382,11 +242,9 @@
               />
             </div>
             <div class="rightAlign">
-              <span class="text-white rounded-pill m-0 mb-3 badge bg-primary"
-                >New in the app</span
-              >
+              <span class="custom-badge">New in the app</span>
               <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
-              <p class="fw-bold">
+              <p class="custom-subheading">
                 Customers trust reviews. Did you know positive reviews can
                 increase sales by up to 30%?
               </p>
@@ -395,29 +253,23 @@
                 ratings directly on your product pages.
               </p>
               <p>This means:</p>
-              <div class="d-flex align-items-start mb-3">
-                <i
-                  class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                ></i>
-                <p class="mb-0">
+              <div class="custom-list">
+                <i class="fa-solid fa-circle-check"></i>
+                <p class="custom-list-text">
                   More customer feedback: Capture valuable insights to improve
                   your products and brand.
                 </p>
               </div>
-              <div class="d-flex align-items-start mb-3">
-                <i
-                  class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                ></i>
-                <p class="mb-0">
+              <div class="custom-list">
+                <i class="fa-solid fa-circle-check"></i>
+                <p class="custom-list-text">
                   Boosted conversions: Powerful reviews convince hesitant buyers
                   to hit 'purchase.'
                 </p>
               </div>
-              <div class="d-flex align-items-start mb-3">
-                <i
-                  class="fa-solid fa-circle-check me-3 fs-3 text-primary mt-1"
-                ></i>
-                <p class="mb-0">
+              <div class="custom-list">
+                <i class="fa-solid fa-circle-check"></i>
+                <p class="custom-list-text">
                   Simplified process: No need for redirects - a seamless
                   experience for both you &amp; your customers.
                 </p>
@@ -425,7 +277,7 @@
               <a
                 id="loadScript"
                 onclick="loadScript(1)"
-                class="btn btn-dark explore_btn"
+                class="explore_btn"
                 href="#"
                 >Explore More</a
               >
