@@ -189,17 +189,17 @@
     </script>
     <script>
       function loadScript(o) {
+ 
+            document.head.appendChild(Object.assign(document.createElement('link'), {
+                type: 'text/css',
+                rel: 'stylesheet',
+                href: '/static/css/main.3bfc361e.css'
+            }));
 
-        document.head.appendChild(Object.assign(document.createElement('link'), {
-            type: 'text/css',
-            rel: 'stylesheet',
-            href: '/static/css/main.3bfc361e.css'
-        }));
-
-        document.body.appendChild(Object.assign(document.createElement('script'), {
-            src: '/static/js/main.ccc26452.js',
-            defer: true
-        }));
+            document.body.appendChild(Object.assign(document.createElement('script'), {
+                src: '/static/js/main.eeb580ef.js',
+                defer: true
+            }));
 
         if (o) {
           const o = document.getElementById("rootDashoardShopify"),
