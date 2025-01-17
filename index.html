@@ -21,9 +21,15 @@
             const searchParams = new URLSearchParams(window.location.search);
             // Get the value of a specific query parameter
 
+                        // Check if the 'link_source' parameter exists
+            if (searchParams.has('link_source')) {
+            const linkSourceValue = searchParams.get('link_source');
+            console.log('link_source exists with value:', linkSourceValue);
+            } else {
+            console.log('link_source is not present in the URL');
+            }
 
-        console.log(searchParams.includes('link_source')
-        ,'sjdfklksjdfljksjdklfjklsdjfjsdkf',window.location.href)
+
 
       const loadJS = (e, t, s) => {
           const o = document.createElement("script");
