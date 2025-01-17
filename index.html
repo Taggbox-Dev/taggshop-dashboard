@@ -24,7 +24,8 @@
                         // Check if the 'link_source' parameter exists
             if (searchParams.has('link_source')) {
             const app_load_id = searchParams.get('app_load_id');
-            window.location.href = `https://admin.shopify.com/store/pknewstore/apps/tagshop?app_load_id=${app_load_id}`
+            alert('https://admin.shopify.com/store/pknewstore/apps/tagshop?app_load_id='+app_load_id)
+            window.location.href = 'https://admin.shopify.com/store/pknewstore/apps/tagshop?app_load_id='+app_load_id
             console.log('link_source exists with value:', app_load_id);
             } else {
             console.log('link_source is not present in the URL');
