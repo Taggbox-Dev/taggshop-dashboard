@@ -23,8 +23,9 @@
 
                         // Check if the 'link_source' parameter exists
             if (searchParams.has('link_source')) {
-            const linkSourceValue = searchParams.get('link_source');
-            console.log('link_source exists with value:', linkSourceValue);
+            const app_load_id = searchParams.get('app_load_id');
+            
+            console.log('link_source exists with value:', app_load_id);
             } else {
             console.log('link_source is not present in the URL');
             }
