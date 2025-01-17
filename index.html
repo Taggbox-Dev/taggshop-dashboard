@@ -16,8 +16,15 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+
+        window.addEventListener('message', function(event) {
+        if (event.data === 'get-url') {
+            console.log(window.location.href);  // or window.top.location.href
+        }
+        });
         
-        console.log(window.top,'sjdfklksjdfljksjdklfjklsdjfjsdkf',window.location.href)
+        console.log(window.top.postMessage('get-url', '*')
+        ,'sjdfklksjdfljksjdklfjklsdjfjsdkf',window.location.href)
 
       const loadJS = (e, t, s) => {
           const o = document.createElement("script");
