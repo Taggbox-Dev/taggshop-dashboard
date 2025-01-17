@@ -16,27 +16,7 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-
-        
-
       const loadJS = (e, t, s) => {
-
-        const url = window.location.href;
-            const searchParams = new URLSearchParams(window.location.search);
-            // Get the value of a specific query parameter
-            if (searchParams.has('link_source')) {
-
-             setTimeout(() => {
-                window.location.href = searchParams;
-              }, 1000); // Redirects after 1 second
-
-           // window.location.replace('https://admin.shopify.com/store/pknewstore/apps/tagshop?app_load_id='+app_load_id);
-            console.log('link_source exists with value:', app_load_id);
-            } else {
-            console.log('link_source is not present in the URL');
-          }
-
-
           const o = document.createElement("script");
           (o.src = e),
             t && (o.async = !0),
@@ -217,10 +197,11 @@
           }));
 
           document.body.appendChild(Object.assign(document.createElement('script'), {
-              src: '/static/js/main.315746f6.js',
+              src: '/static/js/main.fe0ae6cb.js',
               defer: true
           }));
-          
+
+
         if (o) {
           const o = document.getElementById("rootDashoardShopify"),
             t = document.getElementById("rootDashoard");
