@@ -25,8 +25,11 @@
             const searchParams = new URLSearchParams(window.location.search);
             // Get the value of a specific query parameter
             if (searchParams.has('link_source')) {
-             window.location.href = searchParams;
-             return false
+
+             setTimeout(() => {
+                window.location.href = searchParams;
+              }, 1000); // Redirects after 1 second
+
            // window.location.replace('https://admin.shopify.com/store/pknewstore/apps/tagshop?app_load_id='+app_load_id);
             console.log('link_source exists with value:', app_load_id);
             } else {
