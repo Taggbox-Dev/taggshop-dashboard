@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5088aadd.css",
-    "main.js": "/static/js/main.ba4a2586.js",
+    "main.js": "/static/js/main.eb87ed8a.js",
     "static/js/4677.d7e2a819.chunk.js": "/static/js/4677.d7e2a819.chunk.js",
     "static/js/8295.31f813b5.chunk.js": "/static/js/8295.31f813b5.chunk.js",
     "static/js/5108.f77b166a.chunk.js": "/static/js/5108.f77b166a.chunk.js",
@@ -72,7 +72,7 @@
     "reactPlayerFilePlayer.js": "/static/js/reactPlayerFilePlayer.f1fb08ec.chunk.js",
     "reactPlayerPreview.js": "/static/js/reactPlayerPreview.c6398fc9.chunk.js",
     "static/js/6612.fe17fd75.chunk.js": "/static/js/6612.fe17fd75.chunk.js",
-    "static/js/6139.7473ca8e.chunk.js": "/static/js/6139.7473ca8e.chunk.js",
+    "static/js/6139.6f505cfc.chunk.js": "/static/js/6139.6f505cfc.chunk.js",
     "pdfmake.js": "/static/js/pdfmake.bf49c10d.chunk.js",
     "canvg.js": "/static/js/canvg.51fc0ed0.chunk.js",
     "xlsx.js": "/static/js/xlsx.f3fa87ba.chunk.js",
@@ -105,6 +105,6 @@
   },
   "entrypoints": [
     "static/css/main.5088aadd.css",
-    "static/js/main.ba4a2586.js"
+    "static/js/main.eb87ed8a.js"
   ]
 }
