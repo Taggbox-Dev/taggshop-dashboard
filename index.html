@@ -6,7 +6,6 @@
     <meta name="description" content="tagshop" />
     <meta name="keywords" content="tagshop" />
     <meta name="author" content="tagshop" />
-    <meta name="shopify-debug" content="web-vitals" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/assets/media/favicon.ico" />
     <link rel="stylesheet" href="/assets/jquery.minicolors.css" />
@@ -16,8 +15,6 @@
       crossorigin="anonymous"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
-
     <script>
       const loadJS = (e, t, s) => {
           const o = document.createElement("script");
@@ -50,14 +47,14 @@
               href: "/assets/custom-popup.css",
             })
           );
-        //   const e = document.getElementById("rootDashoardShopify"),
-        //     t = document.getElementById("rootDashoard");
-        //   if (e && t) {
-        //     (t.style.display = "none"), (e.style.display = "block");
-        //     const s = setTimeout(() => {
-        //       getappJS(), getTagmanager(), s && clearTimeout(s);
-        //     }, 1e3);
-        //   }
+          const e = document.getElementById("rootDashoardShopify"),
+            t = document.getElementById("rootDashoard");
+          if (e && t) {
+            (t.style.display = "none"), (e.style.display = "block");
+            const s = setTimeout(() => {
+              getappJS(), getTagmanager(), s && clearTimeout(s);
+            }, 1e3);
+          }
         } else getappJS(), getTagmanager(), loadScript();
       }),
         (window.intercomSettings = { api_base: "https://api-iam.intercom.io" });
@@ -214,7 +211,7 @@
         }
       }
     </script>
-    <script defer="defer" src="/static/js/main.9b4a605d.js"></script>
+    <script defer="defer" src="/static/js/main.d3f19cfa.js"></script>
     <link href="/static/css/main.62538d1d.css" rel="stylesheet" />
   </head>
   <body
