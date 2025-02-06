@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.62538d1d.css",
-    "main.js": "/static/js/main.d3f19cfa.js",
+    "main.js": "/static/js/main.c3e69064.js",
     "static/js/4677.d7e2a819.chunk.js": "/static/js/4677.d7e2a819.chunk.js",
     "static/js/8295.31f813b5.chunk.js": "/static/js/8295.31f813b5.chunk.js",
     "static/js/5108.f15494ad.chunk.js": "/static/js/5108.f15494ad.chunk.js",
@@ -99,7 +99,7 @@
     "static/css/6957.0e8ae1ed.chunk.css": "/static/css/6957.0e8ae1ed.chunk.css",
     "static/js/4928.c1185bb2.chunk.js": "/static/js/4928.c1185bb2.chunk.js",
     "static/js/624.4361b20a.chunk.js": "/static/js/624.4361b20a.chunk.js",
-    "static/js/7976.39a7b785.chunk.js": "/static/js/7976.39a7b785.chunk.js",
+    "static/js/7976.0b035bd9.chunk.js": "/static/js/7976.0b035bd9.chunk.js",
     "static/js/3035.89c2325e.chunk.js": "/static/js/3035.89c2325e.chunk.js",
     "static/js/7625.290cc6aa.chunk.js": "/static/js/7625.290cc6aa.chunk.js",
     "static/media/flags@2x.png": "/static/media/flags@2x.140042eba8c90ae1cede.png",
@@ -108,6 +108,6 @@
   },
   "entrypoints": [
     "static/css/main.62538d1d.css",
-    "static/js/main.d3f19cfa.js"
+    "static/js/main.c3e69064.js"
   ]
 }
