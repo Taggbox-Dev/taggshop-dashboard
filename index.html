@@ -8,13 +8,12 @@
     <meta name="author" content="tagshop" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/assets/media/favicon.ico" />
-    <link rel="stylesheet" href="/assets/jquery.minicolors.css" />
     <link
       rel="stylesheet"
-      href="https://cloud.tagshop.ai/app/font-awesome/css/all.css"
+      href="/font-awesome/css/all.css"
       crossorigin="anonymous"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cloud.tagshop.ai/app/jquery-3.6.0.min.js"></script>
     <script>
       const loadJS = (t, e, o) => {
           const s = document.createElement("script");
@@ -24,7 +23,7 @@
             document.body.appendChild(s);
         },
         getappJS = () => {
-          loadJS("/assets/jquery.minicolors.js"),
+          loadJS("https://cloud.tagshop.ai/app/jquery.minicolors.js"),
             loadJS(
               "https://maps.googleapis.com/maps/api/js?key=AIzaSyC0iH8uH6vpABk73L7sd8Kn-5B7q9SthTg&libraries=places"
             ),
@@ -34,8 +33,6 @@
               !0
             ),
             loadJS("https://accounts.google.com/gsi/client", !0, !0),
-            loadJS("https://unpkg.com/@shopify/app-bridge@3"),
-            loadJS("https://unpkg.com/@shopify/app-bridge-utils@3"),
             loadJS("https://js.stripe.com/v3/");
         };
       document.addEventListener("DOMContentLoaded", function () {
@@ -52,7 +49,7 @@
           if (t && e) {
             (e.style.display = "none"), (t.style.display = "block");
             const o = setTimeout(() => {
-              getappJS(), getTagmanager(), o && clearTimeout(o);
+              getTagmanager(), o && clearTimeout(o);
             }, 1e3);
           }
         } else getappJS(), getTagmanager(), "localhost" != window?.location?.hostname && loadScript();
@@ -91,7 +88,7 @@
         }
       })();
     </script>
-    <script type="text/javascript">
+    <script>
       !(function () {
         "use strict";
         !(function (e, t) {
@@ -207,12 +204,14 @@
         ) {
           const e = document.getElementById("rootDashoardShopify"),
             t = document.getElementById("rootDashoard");
-          t && (t.style.display = "block"), e && (e.style.display = "none");
+          t && (t.style.display = "block"),
+            e && (e.style.display = "none"),
+            getappJS();
         }
       }
     </script>
-    <script defer="defer" src="/static/js/main.6b1f0f00.js"></script>
-    <link href="/static/css/main.62538d1d.css" rel="stylesheet" />
+    <script defer="defer" src="/static/js/main.3ccb455e.js"></script>
+    <link href="/static/css/main.61d6c84c.css" rel="stylesheet" />
   </head>
   <body
     class="header-fixed header-mobile-fixed subheader-fixed aside-enabled aside-fixed aside-minimize aside-minimize-hoverable aside_hide safari ts-chrome plans-page-active"
@@ -245,14 +244,16 @@
             <div class="leftAlign">
               <img
                 src="/assets/media/images/review-modal.png"
+                loading="lazy"
                 width="375"
                 height="479"
-                alt="image"
+                alt="Collect Reviews"
+                title="Collect Reviews"
               />
             </div>
             <div class="rightAlign">
               <span class="custom-badge">New in the app</span>
-              <h2 class="mb-3">Collect reviews directly on your PDPs!</h2>
+              <span class="mb-3">Collect reviews directly on your PDPs!</span>
               <p class="custom-subheading">
                 Customers trust reviews. Did you know positive reviews can
                 increase sales by up to 30%?
@@ -289,6 +290,7 @@
                 onclick="loadScript(1)"
                 class="explore_btn"
                 href="#"
+                title="Explore"
                 >Explore More</a
               >
             </div>
